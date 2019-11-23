@@ -1,21 +1,25 @@
-{% extends "layout.html" %}
-            {% block heading %}
-                Welcome
-            {% endblock %}
-
-            {% block subheading %}
-                Click below to either sign up or login to Marho's book Reviews
-            {% endblock %}
-                
-            {% block body %} 
-            <div class="container">
-                <div class ="row">
-                    <div class="col-md text-center">
-                        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Sign Up</a>
-                    </div>
-                    <div class="col-md text-center">
-                        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Login</a>
-                    </div>
-                </div>       
-            </div>
-            {% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marho's Book Reviews</title>
+        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="jumbotron" style="text-align: center;">
+            <h1>Marho's Book Reviews</h1>
+            <p>A website for book lovers where you can review popular novels and check out the opinions of other book lovers</p>
+        </div>
+        <h2>Welcome</h2>
+        <p style="text-align: center;">Click below to either sign up or login to Marho's book Reviews</p>
+        <div class="container">
+            <div class ="row">
+                <div class="col-md text-center">
+                    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('signup') }}" role="button">Sign Up</a>
+                </div>
+                <div class="col-md text-center">
+                    <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('login') }}" role="button">Login</a>
+                </div>
+            </div>       
+        </div>

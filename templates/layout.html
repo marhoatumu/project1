@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Book Reviews</title>
+        <title>Marho's Book Reviews</title>
         <link rel="stylesheet" href="static/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-            <div class="jumbotron" style="text-align: center;">
-                <h1>Marho's Book Reviews</h1>
-                <p>A website for book lovers where you can review popular novels and check out the opinions of other book lovers</p>
-            </div>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <a class="navbar-brand" href="#">Marho's Book Reviews</a>
+            <ul class="navbar-nav text-right">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Login</button>
+        </nav>
         
         <h2>{% block heading %} {% endblock %}</h2>
         <p style="text-align: center;">{% block subheading %} {% endblock %}</p>
