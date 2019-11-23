@@ -32,3 +32,15 @@ def signup():
 @app.route("/login")
 def login():
     return render_template ("login.html")
+
+@app.route("/home")
+def home():
+    return render_template ("home.html")
+
+@app.route("/search")
+def search():
+    return render_template ("search-result.html")
+
+@app.route("/book")
+def book():
+    return render_template ("book.html")
