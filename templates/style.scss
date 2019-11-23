@@ -1,0 +1,49 @@
+#profile-pic{
+    padding: 30px;
+    img{
+        border-radius: 20px;
+        border: solid 4px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.linked {
+    margin: 2px;
+    border: 2px solid;
+    text-align: center;
+}
+
+.col {
+    margin: 5px;
+    
+    ol {
+        font-weight: 600;
+        
+    }
+}
+
+$headingColor: gray;
+$headingText: center;
+
+h1{
+    color: $headingColor;
+    text-align: $headingText
+}
+
+h2{
+    color: $headingColor;
+    text-align: $headingText
+}
+
+@media (max-width: 600px) {
+    .table {
+      background-color: rgb(158, 158, 158);
+    }
+  }
+
+table {
+    border: 3px solid;
+
+}

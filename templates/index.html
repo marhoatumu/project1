@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+            {% block heading %}
+                Hello, world! 
+            {% endblock %}
+
+            {% block subheading %}
+                Bootstrap Page
+            {% endblock %}
+                
+            {% block body %} 
+                <div class="container">
+                        <div class="row">
+                            <div class="col linked">
+                                <a href="index.html">Picture Page</a>
+                            </div>
+                            <div class="col linked">
+                                <a href="page2.html">Lists Page</a>
+                            </div>
+                            <div class="col linked">
+                                <a href="page3.html">Table Page</a>
+                            </div>
+                            <div class="col linked">
+                                <a href="page4.html">Paragraph Page</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-pic">
+                            <img src="pic.jpg" width=380px height="280">
+                    </div>
+            {% endblock %}
