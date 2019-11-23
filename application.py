@@ -1,11 +1,11 @@
 import os
 
-from flask import Flask, session, render_template
+from flask import Flask, session, render_template, url_for
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
