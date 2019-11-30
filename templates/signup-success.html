@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block heading %}
+    Sign In
+{% endblock %}
+
+{% block subheading %}
+Registration Successful!!
+{% endblock %}
+    
+{% block body %} 
+<p style="text-align: center;">Your account has been created. Click below to go to the login to Marho's book Reviews</p>
+<div class="container">
+    <div class ="row">
+        <div class="col-md text-center">
+            <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('login') }}" role="button">Login</a>
+        </div>
+    </div>       
+</div>
+{% endblock %}
