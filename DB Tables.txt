@@ -1,0 +1,28 @@
+User Accounts
+	User ID
+	First Name
+	Last Name
+	Username
+	Password
+
+Authors
+	ID
+	Author Name
+
+Books
+	ID
+	Book Name
+	Author Name
+	ISBN
+	Publication Year
+
+Publication Year
+	ID
+	Year
+
+Reviews
+	ID
+	Book Name
+	Review Score
+	Review Details
+

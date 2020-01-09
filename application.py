@@ -31,7 +31,8 @@ def signup():
 
 @app.route("/signup-success", methods=["POST"])
 def signup_success():
-    return render_template ("signup-success.html")
+    name = request.form.get("first-name")
+    return render_template ("signup-success.html", name=name)
 
 @app.route("/login")
 def login():
