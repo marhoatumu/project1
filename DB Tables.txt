@@ -1,28 +1,28 @@
-User Accounts
-	User ID
-	First Name
-	Last Name
-	Username
-	Password
+User Accounts 
+	User ID (serial)
+	First Name (varchar)
+	Last Name (varchar)
+	Username (varchar)
+	Password 
 
 Authors
-	ID
-	Author Name
+	ID (serial)
+	Author Name (varchar)
 
 Books
 	ID
-	Book Name
-	Author Name
-	ISBN
-	Publication Year
+	Book Name (varchar)
+	Author Name (varchar)
+	ISBN (varchar)
+	Publication Year (integer)
 
 Publication Year
-	ID
-	Year
+	ID (serial)
+	Year (integer)
 
 Reviews
-	ID
-	Book Name
-	Review Score
-	Review Details
+	ID (serial)
+	Book Name (varchar)
+	Review Score (integer)
+	Review Details (varchar)
 
