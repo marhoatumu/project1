@@ -2,7 +2,7 @@ User Accounts
 	User ID (serial)
 	First Name (varchar)
 	Last Name (varchar)
-	Username (varchar)
+	email (varchar)
 	Password 
 
 Authors
@@ -12,17 +12,17 @@ Authors
 Books
 	ID
 	Book Name (varchar)
-	Author Name (varchar)
+	Author Id(varchar)
 	ISBN (varchar)
-	Publication Year (integer)
+	Publication Year Id(integer)
 
 Publication Year
 	ID (serial)
-	Year (integer)
+	Year (date)
 
 Reviews
 	ID (serial)
-	Book Name (varchar)
-	Review Score (integer)
+	Book Name ID(integer)
+	Review Score (enum)
 	Review Details (varchar)
 
