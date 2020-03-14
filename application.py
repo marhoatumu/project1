@@ -31,21 +31,45 @@ def signup():
 
 @app.route("/signup-success", methods=["POST"])
 def signup_success():
-    name = request.form.get("first-name")
-    return render_template ("signup-success.html", name=name)
+    #Get information from the signup page
+    firstName = request.form.get("first-name")
+    lastName = request.form.get("last-name")
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    #add form information to database
+    db.execute("INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)",
+    {"firstname": firstName, "lastname": lastName, "email": email, "password": password})
+    db.commit()
+
+
+    return render_template ("signup-success.html", firstname=firstName)
 
 @app.route("/login")
 def login():
     return render_template ("login.html")
 
-@app.route("/home")
+@app.route("/home", methods=["POST"])
 def home():
-    return render_template ("home.html")
+    #Get information from the signup page
+    email = request.form.get("email")
+    password = request.form.get("password")
 
-@app.route("/search")
+    #check if username and password are correct
+    if db.execute("SELECT * FROM users WHERE email = :email AND password = :password", {"email": email, "password": password}).rowcount == 0:
+        return render_template("error.html", message="Incorrect username and/or password. Please try again")
+        db.commit()
+    else:
+        return render_template ("home.html")
+
+@app.route("/search", methods=["POST"])
 def search():
     return render_template ("search-result.html")
 
 @app.route("/book")
 def book():
     return render_template ("book.html")
+
+@app.route("/error")
+def error():
+    return render_template ("error.html")
